@@ -66,11 +66,13 @@
   <ItemGroup>
     <ClInclude Include="DataCompressor.h" />
     <ClInclude Include="Edge.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataCompressor.cpp" />
     <ClCompile Include="Edge.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
