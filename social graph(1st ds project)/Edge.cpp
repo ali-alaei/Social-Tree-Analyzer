@@ -32,3 +32,9 @@ int* Edge::getTimes()
     }
     return timesArray;
 }
+
+Edge::Edge() {
+}
+
+Edge::~Edge() {
+}

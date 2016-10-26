@@ -1,6 +1,7 @@
+#ifndef EDGE_H
+#define EDGE_H
 #include "Node.h"
-#include "LinkedList.h"
-
+#include "Vector.h"
 class Edge {
 public:
     Edge();
@@ -21,14 +22,10 @@ public:
 private:
     Node *node1;
     Node *node2;
-    LinkedList times;
+	Vector<int> times;
 
 
 
 };
+#endif
 
-Edge::Edge() {
-}
-
-Edge::~Edge() {
-}

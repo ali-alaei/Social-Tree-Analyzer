@@ -1,6 +1,11 @@
+#ifndef DATACOMPRESSOR_H
+#define DATACOMPRESSOR_H
 #include"Edge.h"
 #include"Node.h"
-#include<string>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <cstdlib>
 class DataCompressor
 {
 public:
@@ -14,15 +19,6 @@ private:
 	Edge edge;
 	Node node;
 
-
-	
-
 };
+#endif
 
-DataCompressor::DataCompressor()
-{
-}
-
-DataCompressor::~DataCompressor()
-{
-}
