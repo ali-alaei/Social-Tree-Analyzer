@@ -6,10 +6,11 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+
 class DataCompressor
 {
 public:
-	void init();
+	void init(unsigned short int, unsigned short int, unsigned short int);
 	std::string getCompressData();
 	void dataToList();
 	
