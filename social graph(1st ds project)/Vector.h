@@ -19,7 +19,7 @@ public:
 	{
 		return this->size;
 	}
-	void add(int value)
+	void add(T value)
 	{
 		array[iterator] = value;
 		this->iterator++;

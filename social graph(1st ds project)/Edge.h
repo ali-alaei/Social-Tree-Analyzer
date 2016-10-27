@@ -15,7 +15,7 @@ public:
 
     void addTime(int);
     int connectedTimes();
-    int* getTimes();
+    Vector<int> getTimes();
 
 
 

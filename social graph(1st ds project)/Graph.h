@@ -3,16 +3,14 @@
 #include"Vector.h"
 #include"Node.h"
 #include"Edge.h"
-class Graph
+struct Graph
 {
-public:
-	Vector<Node> nodesList;
-	Vector<Edge> edgeList;
-	Graph();
-	~Graph();
+	Vector<Node> nodes;
+	Vector<Edge> edges;
+
 	//void setNodes();
 	//void setEdges();
-private:
+
 
 };
 #endif

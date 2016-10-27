@@ -24,17 +24,19 @@ int Edge::connectedTimes()
         return times.getSize();
 }
 
-int* Edge::getTimes()
+Vector<int> Edge::getTimes()
 {
-    int timesArray[this->connectedTimes()];
-    for(int i=0;i<this->connectedTimes();i++){
-        timesArray[i]=this->times.getValue(i);
-    }
-    return timesArray;
+//    int timesArray[this->connectedTimes()];
+//    for(int i=0;i<this->connectedTimes();i++){
+//        timesArray[i]=this->times.getValue(i);
+//    }
+    return this->times;
 }
+
 
 Edge::Edge() {
 }
 
 Edge::~Edge() {
 }
+

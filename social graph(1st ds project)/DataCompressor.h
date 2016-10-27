@@ -1,24 +1,24 @@
 #ifndef DATACOMPRESSOR_H
 #define DATACOMPRESSOR_H
-#include"Edge.h"
-#include"Node.h"
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include"Graph.h"
+
+typedef unsigned short int usi;
 
 class DataCompressor
 {
 public:
-	void init(unsigned short int, unsigned short int, unsigned short int);
-	std::string getCompressData();
+	void init(usi,usi,usi);
+	Graph getCompressData();
 	void dataToList();
 	
 	DataCompressor();
 	~DataCompressor();
 private:
-	Edge edge;
-	Node node;
+	Graph graph;
 
 };
 #endif
