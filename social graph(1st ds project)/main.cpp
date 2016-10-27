@@ -1,16 +1,12 @@
 #include <iostream>
-#include "string"
-#include "Node.h"
-
+#include"DataCompressor.h"
 using namespace std;
-
-
-int main() {
-
-
-
-
-
-
+int main() 
+{
+	///std::string dataAddress;
+	//dataAddress = "data2.txt";
+	DataCompressor compressor;
+	compressor.dataToList();
+	system("pause");
    return 0;
 }

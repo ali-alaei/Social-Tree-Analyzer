@@ -41,8 +41,5 @@
     <ClCompile Include="Edge.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graph.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
