@@ -1,13 +1,15 @@
+#include<assert.h>
 #ifndef VECTOR_H
 #define VECTOR_H 
 template <class T>
+
 class Vector
 {
 public:
 	Vector()
 	{
-		this->iterator = 0;
-		this->maxSize = 1000;
+		this->size = 0;
+		this->maxSize = 10000;
 		array = new T[maxSize];
 	}
 	~Vector()
@@ -21,36 +23,37 @@ public:
 	}
 	void add(T value)
 	{
-		array[iterator] = value;
-		this->iterator++;
-		this->size++;
-		if ((size + 1) == maxSize)
+		array[size++] = value;
+		if (size  == maxSize)
 		{
 			expand();
 		}
-
-
 	}
-	T getVector(int index)
+
+	T& getVector(int index)
 	{
+		assert(index >=0);
+		assert(index < size);
 		return this->array[index];
 	}
 private:
 	void expand()
 	{
-		tempArray = new T[(maxSize += 1000)];
+		//std::cout << "vector expand" << std::endl;
+		maxSize += 10000;
+		tempArray = new T[maxSize];
 		for (int i = 0; i < this->size; i++)
 		{
 			tempArray[i] = array[i];
 		}
-		delete array;
+		delete[] array;
 		array = tempArray;
+		//array = new T(tempArray);
 	}
 	T* tempArray;
 	T* array;
 	int size;
 	int maxSize;
-	int iterator;
 };
 
 #endif

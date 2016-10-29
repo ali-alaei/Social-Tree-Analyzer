@@ -2,6 +2,7 @@
 #define EDGE_H
 #include "Node.h"
 #include "Vector.h"
+typedef unsigned short int usi;
 class Edge {
 public:
     Edge();
@@ -11,18 +12,16 @@ public:
     void setNodes(Node *node1, Node *node2);
 
     Node *getNodes();
-
-
-    void addTime(int);
+    void addTime(usi);
     int connectedTimes();
-    Vector<int> getTimes();
+    Vector<usi> getTimes();
 
 
 
 private:
     Node *node1;
     Node *node2;
-	Vector<int> times;
+	Vector<usi> times;
 
 
 

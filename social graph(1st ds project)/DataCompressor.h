@@ -14,11 +14,14 @@ public:
 	void init(usi,usi,usi);
 	Graph getCompressData();
 	void dataToList();
+	Node tmpNode1;
+	Node tmpNode2;
 	
 	DataCompressor();
 	~DataCompressor();
 private:
 	Graph graph;
+	Edge newEdge;
 
 };
 #endif

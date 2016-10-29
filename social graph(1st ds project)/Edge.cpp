@@ -8,13 +8,12 @@ void Edge::setNodes(Node *node_1, Node *node_2)
 }
 Node* Edge::getNodes()
 {
-        Node *nodes = new Node[2];
+        Node nodes[2];
         nodes[0] = *node1;
         nodes[1] = *node2;
         return nodes;
-
 }
-void Edge::addTime(int time)
+void Edge::addTime(usi time)
 {
         times.add(time);
 }
@@ -24,7 +23,7 @@ int Edge::connectedTimes()
         return times.getSize();
 }
 
-Vector<int> Edge::getTimes()
+Vector<usi> Edge::getTimes()
 {
 //    int timesArray[this->connectedTimes()];
 //    for(int i=0;i<this->connectedTimes();i++){
@@ -34,9 +33,12 @@ Vector<int> Edge::getTimes()
 }
 
 
-Edge::Edge() {
+Edge::Edge() 
+{
 }
 
-Edge::~Edge() {
+Edge::~Edge() 
+{
+
 }
 

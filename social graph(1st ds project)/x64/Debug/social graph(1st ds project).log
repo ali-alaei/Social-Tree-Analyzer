@@ -1,0 +1,22 @@
+﻿Build started 10/27/2016 9:17:06 PM.
+     1>Project "C:\Users\ali\Documents\Visual Studio 2013\Projects\Social-Tree-Analyzer\social graph(1st ds project)\social graph(1st ds project).vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt DataCompressor.cpp
+         DataCompressor.cpp
+     1>DataCompressor.cpp(45): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+     1>DataCompressor.cpp(46): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+     1>DataCompressor.cpp(48): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+     1>DataCompressor.cpp(63): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+     1>DataCompressor.cpp(66): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+     1>DataCompressor.cpp(71): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+     1>DataCompressor.cpp(74): warning C4244: 'argument' : conversion from 'unsigned __int64' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ali\Documents\Visual Studio 2013\Projects\Social-Tree-Analyzer\x64\Debug\social graph(1st ds project).exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ali\Documents\Visual Studio 2013\Projects\Social-Tree-Analyzer\x64\Debug\social graph(1st ds project).pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ali\Documents\Visual Studio 2013\Projects\Social-Tree-Analyzer\x64\Debug\social graph(1st ds project).lib" /MACHINE:X64 x64\Debug\DataCompressor.obj
+         x64\Debug\Edge.obj
+         x64\Debug\main.obj
+         social graph(1st ds project).vcxproj -> C:\Users\ali\Documents\Visual Studio 2013\Projects\Social-Tree-Analyzer\x64\Debug\social graph(1st ds project).exe
+     1>Done Building Project "C:\Users\ali\Documents\Visual Studio 2013\Projects\Social-Tree-Analyzer\social graph(1st ds project)\social graph(1st ds project).vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.90

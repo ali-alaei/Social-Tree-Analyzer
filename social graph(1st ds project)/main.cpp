@@ -7,6 +7,6 @@ int main()
 	//dataAddress = "data2.txt";
 	DataCompressor compressor;
 	compressor.dataToList();
-	system("pause");
-   return 0;
+    system("pause");
+    return 0;
 }
