@@ -1,3 +1,6 @@
+//#define test
+#include<assert.h>
+typedef unsigned int ui;
 #include"DataCompressor.h"
 DataCompressor::DataCompressor()
 {
@@ -7,57 +10,58 @@ DataCompressor::~DataCompressor()
 {
 }
 
-void DataCompressor::dataToList()
+void DataCompressor::init(std::string entry_file)
 {
-	int ctr = 0;
+	//usi ctr = 0;
 	usi firstVAlue, secondValue, thirdValue;
-	std::ifstream data("bgdata.txt");
-	if (!data)
-	{
-		std::cerr << "oops file didn't open correctly" << std::endl;
-		exit(1);
-	}
+	std::ifstream data(entry_file.c_str());
+
+	assert(data, "oops file didn't open correctly");
+
 	while (!data.eof())
-	{
-		
+	{	
 		data >> firstVAlue >> secondValue >> thirdValue;
-		ctr++;
-		if (ctr % 1000000 == 0)
+		/*ctr++;
+		if (ctr % 1000 == 0)
 		{
 			std::cout << ctr << std::endl;
-		}
+		}*/
 		
 		//std::cout << firstVAlue<<"\t" << secondValue<<"\t" << thirdValue << std::endl;
-		init(firstVAlue, secondValue, thirdValue);
+		dataToList(firstVAlue, secondValue, thirdValue);
 	}
 
 }
 
-void DataCompressor::init(usi node1Value, usi node2Value, usi time)
+void DataCompressor::dataToList(usi node1Value, usi node2Value, usi time)
 {
-	//std::cout << "init starts" << std::endl;
 	
 	bool edgeFound = false;
-	for(unsigned long long i =0;i<graph.edges.getSize();i++)
+	for(unsigned int i = 0;i<graph.edges.getSize();i++)
 	{
 	//std::cout << "finding edge" << std::endl;
 
-		if(graph.edges.getVector(i).getNodes()[0].value == node1Value
-			&& graph.edges.getVector(i).getNodes()[1].value == node2Value)
+		if(graph.edges.getVector(i).getFirstNode() == node1Value
+			&& graph.edges.getVector(i).getSecondNode() == node2Value)
 		{
 			graph.edges.getVector(i).addTime(time);
+
+			/*for (usi  j= 0;  j< graph.edges.getVector(i).timeSize(); j++)
+			{
+				std::cout << graph.edges.getVector(i).getTimes().getVector(j)<<"\n";
+			}*/
+			
 			bool edgeFound = true;
 			//std::cout << "edge found" << std::endl;
 			break;
 		}
+		break;
 	}
 	if(!edgeFound)
 	{
-		bool node1Found = false;
-		bool node2Found = false;
 		
 		//std::cout << "before for" << std::endl;
-		for(unsigned long long i = 0;i<graph.nodes.getSize();i++)
+		/*for(unsigned long long i = 0;i<graph.nodes.getSize();i++)
 		{
 			//std::cout << "finding node" << std::endl;
 			if(graph.nodes.getVector(i).value == node1Value)
@@ -96,20 +100,25 @@ void DataCompressor::init(usi node1Value, usi node2Value, usi time)
 		{
 			this->tmpNode2.value = node2Value;
 			graph.nodes.add(tmpNode2);
-		}
-		
-
-		newEdge.setNodes(new Node(tmpNode1), new Node(tmpNode2));
+		}*/
+		newEdge.setNodes(node1Value, node2Value);
 		// std::cout << newEdge.getNodes()[0].value<<std::endl;
 		 //std::cout << newEdge.getNodes()[1].value << std::endl;
-
 		newEdge.addTime(time);
 		graph.edges.add(this->newEdge);
-		//if (graph.nodes.getSize() % 200 == 0)
+		//for (usi j = 0; j< newEdge.timeSize(); j++)    //to understand times value
 		//{
-			//std::cout << "node size:" << graph.nodes.getSize() << std::endl;
-			//std::cout << "edge size:" << graph.edges.getSize() << std::endl;
+			//std::cout << newEdge.getTimes().getVector(j)<<"\n";
 		//}
+#ifdef test
+		if (graph.edges.getSize() % 1000 == 0)
+		{
+			
+		//std::cout << "graph size" << sizeof(graph.edges)<< std::endl;
+
+		std::cout << "edge size:" << graph.edges.getSize() << std::endl;
+		}
+#endif
 		
 		//std::cout <<"time size:"<< graph.getSize() << std::endl;
 		//std::cout << "edge found" << std::endl;
@@ -118,5 +127,12 @@ void DataCompressor::init(usi node1Value, usi node2Value, usi time)
 
 
 	}
+		
 	
+}
+
+
+void DataCompressor::getCompressData(Graph& return_compressed_data)
+{
+	return_compressed_data = graph;
 }

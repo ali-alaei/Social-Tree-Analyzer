@@ -1,27 +1,24 @@
 #ifndef EDGE_H
 #define EDGE_H
 #include "Node.h"
-#include "Vector.h"
+#include "TimeVector.h"
 typedef unsigned short int usi;
 class Edge {
 public:
     Edge();
-
     ~Edge();
-
-    void setNodes(Node *node1, Node *node2);
-
-    Node *getNodes();
+    void setNodes(usi node1, usi node2);
+	bool doesTimeExist(usi time);
+    usi getFirstNode();
+	usi getSecondNode();
     void addTime(usi);
-    int connectedTimes();
-    Vector<usi> getTimes();
-
-
-
+    usi connectedTimes();
+    TimeVector<usi> getTimes();
+	usi timeSize();
 private:
-    Node *node1;
-    Node *node2;
-	Vector<usi> times;
+    usi node1;
+    usi node2;
+	TimeVector<usi> times;
 
 
 

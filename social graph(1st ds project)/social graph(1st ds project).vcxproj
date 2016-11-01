@@ -118,13 +118,17 @@
     <ClInclude Include="DataCompressor.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="MatchDetector.h" />
+    <ClInclude Include="MatchMakingResult.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="edgeVector.h" />
+    <ClInclude Include="TimeVector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataCompressor.cpp" />
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MatchMakingResult.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,38 +1,44 @@
 #include<assert.h>
-#ifndef VECTOR_H
-#define VECTOR_H 
+#include <iostream>
+#ifndef TIMEVECTOR_H
+#define TIMEVECTOR_H 
+#define extraSize 10
+typedef unsigned short int usi;
 template <class T>
-
-class Vector
+class TimeVector
 {
 public:
-	Vector()
+	TimeVector()
 	{
 		this->size = 0;
-		this->maxSize = 10000;
-		array = new T[maxSize];
+		this->maxSize = 0;
+		array = nullptr;
 	}
-	~Vector()
+	~TimeVector()
 	{
 
 
 	}
-	int getSize()
+	usi getSize()
 	{
 		return this->size;
 	}
 	void add(T value)
 	{
-		array[size++] = value;
-		if (size  == maxSize)
+		if (size == maxSize)
 		{
 			expand();
 		}
+		array[size++] = value;
+		//std::cout << "time " << value << " added" << "\n";
+		
+
+
 	}
 
-	T& getVector(int index)
+	T getVector(usi index)
 	{
-		assert(index >=0);
+		assert(index >= 0);
 		assert(index < size);
 		return this->array[index];
 	}
@@ -40,20 +46,20 @@ private:
 	void expand()
 	{
 		//std::cout << "vector expand" << std::endl;
-		maxSize += 10000;
-		tempArray = new T[maxSize];
+		maxSize += extraSize;
+		T* tempArray = new T[maxSize];
 		for (int i = 0; i < this->size; i++)
 		{
 			tempArray[i] = array[i];
 		}
 		delete[] array;
 		array = tempArray;
+
 		//array = new T(tempArray);
 	}
-	T* tempArray;
 	T* array;
-	int size;
-	int maxSize;
+	usi size;
+	usi maxSize;
 };
 
 #endif

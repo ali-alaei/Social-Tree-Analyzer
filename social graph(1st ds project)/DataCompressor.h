@@ -11,12 +11,10 @@ typedef unsigned short int usi;
 class DataCompressor
 {
 public:
-	void init(usi,usi,usi);
-	Graph getCompressData();
-	void dataToList();
-	Node tmpNode1;
-	Node tmpNode2;
-	
+	void dataToList(usi,usi,usi);
+	void getCompressData(Graph& return_compressed_data);
+	void init(std::string entry_file);
+	void printCompressedData();
 	DataCompressor();
 	~DataCompressor();
 private:

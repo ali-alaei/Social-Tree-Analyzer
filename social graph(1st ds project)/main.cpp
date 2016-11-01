@@ -3,10 +3,11 @@
 using namespace std;
 int main() 
 {
-	///std::string dataAddress;
-	//dataAddress = "data2.txt";
+	Graph compressedData;
 	DataCompressor compressor;
-	compressor.dataToList();
-    system("pause");
+	compressor.init("bgdata2.txt");
+	compressor.getCompressData(compressedData);
+	//compressedData.print();
+	system("pause");
     return 0;
 }

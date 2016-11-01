@@ -1,29 +1,42 @@
 #include "Edge.h"
 
 
-void Edge::setNodes(Node *node_1, Node *node_2)
+void Edge::setNodes(usi node_1, usi node_2)
 {
         this->node1 = node_1;
         this->node2 = node_2;
 }
-Node* Edge::getNodes()
+usi Edge::getFirstNode()
 {
-        Node nodes[2];
-        nodes[0] = *node1;
-        nodes[1] = *node2;
-        return nodes;
+	return this->node1;
 }
+
+usi Edge::getSecondNode()
+{
+	return this->node2;
+}
+
 void Edge::addTime(usi time)
 {
+	if (!doesTimeExist(time))
         times.add(time);
 }
 
-int Edge::connectedTimes()
+bool Edge::doesTimeExist(usi time)
+{
+	for (int i = 0; i < times.getSize();i++)
+		if (time == times.getVector(i))
+			return true;
+	return false;
+}
+
+
+usi Edge::connectedTimes()
 {
         return times.getSize();
 }
 
-Vector<usi> Edge::getTimes()
+TimeVector<usi> Edge::getTimes()
 {
 //    int timesArray[this->connectedTimes()];
 //    for(int i=0;i<this->connectedTimes();i++){
@@ -33,6 +46,10 @@ Vector<usi> Edge::getTimes()
 }
 
 
+usi Edge::timeSize()
+{
+	return times.getSize();
+}
 Edge::Edge() 
 {
 }
