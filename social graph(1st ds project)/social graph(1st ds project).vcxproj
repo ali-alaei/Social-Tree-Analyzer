@@ -117,7 +117,7 @@
   <ItemGroup>
     <ClInclude Include="DataCompressor.h" />
     <ClInclude Include="Edge.h" />
-    <ClInclude Include="Graph.h" />
+    <ClInclude Include="compressedData.h" />
     <ClInclude Include="MatchDetector.h" />
     <ClInclude Include="MatchMakingResult.h" />
     <ClInclude Include="Node.h" />

@@ -13,8 +13,8 @@ public:
 	usi getSecondNode();
     void addTime(usi);
     usi connectedTimes();
-    TimeVector<usi> getTimes();
-	usi timeSize();
+    TimeVector<usi> getTimes() const;
+	usi timeSize() const;
 private:
     usi node1;
     usi node2;

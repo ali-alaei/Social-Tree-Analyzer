@@ -1,5 +1,5 @@
 #include"MatchMakingResult.h"
-void MatchMakingResult::print(Graph& return_compressed_data)
+void MatchMakingResult::print(MatchMakingResult& return_compressed_data)
 {
 	for (int i = 0; i < return_compressed_data.edges.getSize(); i++)
 	{

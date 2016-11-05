@@ -19,7 +19,7 @@ public:
 
 
 	}
-	ui getSize()
+	ui getSize() const
 	{
 		return this->size;
 	}
@@ -32,7 +32,7 @@ public:
 		array[size++] = value;
 	}
 
-	T getVector(ui index)
+	T getVector(ui index) const
 	{
 		assert(index >=0);
 		assert(index < size);

@@ -36,7 +36,7 @@ usi Edge::connectedTimes()
         return times.getSize();
 }
 
-TimeVector<usi> Edge::getTimes()
+TimeVector<usi> Edge::getTimes() const
 {
 //    int timesArray[this->connectedTimes()];
 //    for(int i=0;i<this->connectedTimes();i++){
@@ -46,7 +46,7 @@ TimeVector<usi> Edge::getTimes()
 }
 
 
-usi Edge::timeSize()
+usi Edge::timeSize() const
 {
 	return times.getSize();
 }

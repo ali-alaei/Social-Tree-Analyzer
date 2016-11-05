@@ -19,7 +19,7 @@ public:
 
 
 	}
-	usi getSize()
+	usi getSize() const
 	{
 		return this->size;
 	}

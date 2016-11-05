@@ -1,18 +1,14 @@
-#include"Graph.h"
+#ifndef MATCHMAKINGRESULT_H
+#define MATCHMAKINGRESULT_H 
+#include"edgeVector.h"
+#include"Node.h"
+#include"Edge.h"
 class MatchMakingResult
 {
+	//Vector<Node> nodes;
 public:
-	MatchMakingResult();
-	~MatchMakingResult();
-	void print(Graph& return_compressed_data);
-private:
-
-};
-
-MatchMakingResult::MatchMakingResult()
-{
+	EdgeVector<Edge> edges;
+	void print(MatchMakingResult& return_compressed_data);
 }
-
-MatchMakingResult::~MatchMakingResult()
-{
-}
+	
+#endif
