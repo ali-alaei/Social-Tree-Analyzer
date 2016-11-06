@@ -9,6 +9,6 @@ class MatchMakingResult
 public:
 	EdgeVector<Edge> edges;
 	void print(MatchMakingResult& return_compressed_data);
-}
+};
 	
 #endif

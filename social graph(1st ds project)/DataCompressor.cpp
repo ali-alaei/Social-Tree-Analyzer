@@ -132,7 +132,7 @@ void DataCompressor::dataToList(usi node1Value, usi node2Value, usi time)
 }
 
 
-void DataCompressor::getCompressData(compressedData& return_compressed_data)
+void DataCompressor::getCompressData(CompressedData& return_compressed_data)
 {
 	return_compressed_data = graph;
 }
